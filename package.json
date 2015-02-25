@@ -1,0 +1,19 @@
+{
+  "name": "containership.plugin",
+  "version": "0.1.0",
+  "description": "A helper module to create ContainerShip plugins",
+  "main": "application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/growbrosops/containership.plugin.git"
+  },
+  "author": "ContainerShip Developers <developers@containership.io>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/growbrosops/containership.plugin/issues"
+  },
+  "homepage": "https://github.com/growbrosops/containership.plugin"
+}
