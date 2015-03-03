@@ -1,3 +1,4 @@
+var fs = require("fs");
 var _ = require("lodash");
 
 function ContainershipPlugin(options){
@@ -8,6 +9,9 @@ function ContainershipPlugin(options){
     });
 
     _.merge(this, options);
+
+    this.config = fs.readFileSync([process.env.HOME, ".containership", "cli.json"].join("/"));
+    this.config = JSON.parse(this.config);
 }
 
 ContainershipPlugin.prototype.initialize;
