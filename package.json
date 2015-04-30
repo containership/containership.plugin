@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/growbrosops/containership.plugin.git"
+    "url": "https://github.com/containership/containership.plugin.git"
   },
   "author": "ContainerShip Developers <developers@containership.io>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/growbrosops/containership.plugin/issues"
+    "url": "https://github.com/containership/containership.plugin/issues"
   },
-  "homepage": "https://github.com/growbrosops/containership.plugin",
+  "homepage": "https://github.com/containership/containership.plugin",
   "keywords": [
     "containership",
     "containership.plugin",
