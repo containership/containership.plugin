@@ -12,12 +12,22 @@ function ContainershipPlugin(options){
     _.merge(this, options);
 
     if(this.type == "core"){
-        this.config = fs.readFileSync([process.env.HOME, ".containership", [this.name, "json"].join(".")].join("/"));
-        this.config = JSON.parse(this.config);
+        try{
+            this.config = fs.readFileSync([process.env.HOME, ".containership", [this.name, "json"].join(".")].join("/"));
+            this.config = JSON.parse(this.config);
+        }
+        catch(e){
+            this.config = {};
+        }
     }
     else{
-        this.config = fs.readFileSync([process.env.HOME, ".containership", "cli.json"].join("/"));
-        this.config = JSON.parse(this.config);
+        try{
+            this.config = fs.readFileSync([process.env.HOME, ".containership", "cli.json"].join("/"));
+            this.config = JSON.parse(this.config);
+        }
+        catch(e){
+            this.config = {};
+        }
     }
 }
 
