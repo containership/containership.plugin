@@ -15,7 +15,7 @@ ContainerShip Developers - developers@containership.io
 `npm install containership.plugin --save`
 
 ###Options
-* `type` - the type of plugin (either "core" or "cli")
+* `type` - the type of plugin ("core", "cli", or ["core", "cli"])
 * `initialize` - the function which will run when the plugin is initailized
 * `reload` - the function which will run when ContainerShip receives a SIGHUP, and the plugins are reloaded
 
