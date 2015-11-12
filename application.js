@@ -2,6 +2,8 @@ var fs = require("fs");
 var _ = require("lodash");
 
 function ContainershipPlugin(options){
+    var self = this;
+
     _.defaults(options, {
         initialize: function(core){},
         reload: function(){},
@@ -11,22 +13,29 @@ function ContainershipPlugin(options){
 
     _.merge(this, options);
 
-    if(this.type == "core"){
-        try{
-            this.config = fs.readFileSync([process.env.HOME, ".containership", [this.name, "json"].join(".")].join("/"));
-            this.config = JSON.parse(this.config);
+    this.get_config = function(type){
+        if(_.isUndefined(type) && _.isString(self.type))
+            type = self.type;
+        else if(_.isUndefined(type) && _.isArray(self.type))
+            type = _.first(self.type);
+
+        if(type == "core"){
+            try{
+                var config = fs.readFileSync([process.env.HOME, ".containership", [self.name, "json"].join(".")].join("/"));
+                return JSON.parse(config);
+            }
+            catch(e){
+                return {};
+            }
         }
-        catch(e){
-            this.config = {};
-        }
-    }
-    else{
-        try{
-            this.config = fs.readFileSync([process.env.HOME, ".containership", "cli.json"].join("/"));
-            this.config = JSON.parse(this.config);
-        }
-        catch(e){
-            this.config = {};
+        else if(type == "cli"){
+            try{
+                var config = fs.readFileSync([process.env.HOME, ".containership", "cli.json"].join("/"));
+                return JSON.parse(config);
+            }
+            catch(e){
+                return {};
+            }
         }
     }
 }
