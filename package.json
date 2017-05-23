@@ -1,5 +1,5 @@
 {
-  "name": "@jeremykross/containership.plugin",
+  "name": "containership.plugin",
   "version": "1.0.13",
   "description": "",
   "main": "index.js",
