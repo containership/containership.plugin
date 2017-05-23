@@ -1,6 +1,6 @@
 {
-  "name": "containership.plugin.v2",
-  "version": "1.0.0",
+  "name": "@jeremykross/containership.plugin",
+  "version": "1.0.13",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "@jeremykross/containership.host-types": "*"
   }
 }
