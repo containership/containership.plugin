@@ -1,5 +1,5 @@
 {
-  "name": "@jeremykross/containership.plugin",
+  "name": "@containership/containership.plugin",
   "version": "1.0.28",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.4",
-    "@containership/containership.host-types": "git+https://***REMOVED***:x-oauth-basic@github.com/containership/containership.host-types"
+    "@containership/containership.host-types": "git://github.com/containership/containership.host-types.git"
   }
 }
