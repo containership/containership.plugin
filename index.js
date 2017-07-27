@@ -1,3 +1,5 @@
+'use strict';
+
 const ContainershipPlugin = require('./lib/containership-plugin');
 const ApiBuilder = require('./lib/api-builder');
 
